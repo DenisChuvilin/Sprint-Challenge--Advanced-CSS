@@ -1,18 +1,32 @@
 // Home Content
 
 .home {
-
   .intro {
+    img {
+      width: 100%;
+      border-radius: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
+
+  @media @phone {
+    max-width: 500px;
+
+    img {
+      border-radius: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  } //closes media query home
 
   .space-images {
     display: flex;
@@ -25,7 +39,32 @@
       border-radius: 20px;
       height: 100%;
     }
-  }
+
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+      width: 100%;
+
+      .img-1 {
+        margin: 0 auto;
+        border: 0;
+        border-radius: 4rem;
+        padding: 1.5rem;
+        max-width: 500px;
+        width: 100%;
+      }
+
+      .img-2 {
+        display: none;
+      }
+
+      .img-3 {
+        display: none;
+      }
+    } //closes media space-images
+  } // closs space images
 
   .visit-planets {
     padding: 15px;
@@ -58,18 +97,75 @@
       }
 
       .btn {
+        width: 12rem;
+
+        button {
+          .button(@default-bg-color, @default-color);
+
+          &:hover {
+            .button(@hover-bg-color, @hover-color);
+          }
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
     }
-  }
-}// home
+
+    @media @phone {
+      width: 100%;
+      max-width: 500px;
+      border-top: 1px solid @main-border-color;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0 2rem;
+
+      .walk-text {
+        max-width: 500px;
+        width: 100%;
+
+        h3 {
+          margin-bottom: 10px;
+        }
+
+        p {
+          margin-bottom: 26px;
+        }
+
+        .btn {
+          max-width: 500px;
+          width: 100%;
+          padding: 2rem;
+
+          button {
+            .button-mobile(@default-bg-color, @default-color);
+
+            &:hover {
+              .button-mobile(@hover-bg-color, @hover-color);
+            }
+          } //closs button
+        } //closes button
+      } //closes walk-text
+
+      .walk-img {
+        width: 100%;
+        margin-left: 0%;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+      } //closes walk-img
+    } // closes media query
+  } // closs walk
+} // closes home
