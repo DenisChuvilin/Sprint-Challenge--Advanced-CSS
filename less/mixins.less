@@ -1,1 +1,26 @@
 // Mixins Here
+.space-between-centered() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .column-centered() {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+  }
+  
+.button(@default-bg-color,@default-color){
+    background-color: @default-bg-color;
+    font-size: 2rem;
+    color:@default-color;
+    padding:.75rem .5rem;
+    width:12rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+
+
