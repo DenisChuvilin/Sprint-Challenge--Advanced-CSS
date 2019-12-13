@@ -1,26 +1,36 @@
 // Mixins Here
 .space-between-centered() {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .column-centered() {
-    display: flex;
-    flex-direction: column;
-  
-    align-items: center;
-  }
-  
-.button(@default-bg-color,@default-color){
-    background-color: @default-bg-color;
-    font-size: 2rem;
-    color:@default-color;
-    padding:.75rem .5rem;
-    width:12rem;
-    text-align: center;
-    border-radius: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.column-centered() {
+  display: flex;
+  flex-direction: column;
 
+  align-items: center;
+}
 
+.button-mobile(@default-bg-color,@default-color) {
+  max-width: 500px;
+  width: 100%;
+  padding: 2rem;
+  background-color: @default-bg-color;
+  font-size: 2rem;
+  color: @default-color;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: none;
+  margin: none;
+}
+
+.button(@default-bg-color,@default-color) {
+  background-color: @default-bg-color;
+  width: 12rem;
+  font-size: 1.5rem;
+  color: @default-color;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
