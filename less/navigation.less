@@ -55,14 +55,15 @@ nav {
   text-decoration: none;
 
   @media @phone {
-    nav {
-      max-width: 500px;
-      .space-between-centered();
+    max-width: 500px;
+    .space-between-centered();
+    text-decoration: none;
+    width: 80%;
+
+    a {
       text-decoration: none;
-      width: 100%;
-      margin-right: 3rem;
-      font-size: 2rem;
-      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
     }
   } //closes media query
 } //closes nav

@@ -127,7 +127,6 @@ table {
 }
 * {
   box-sizing: border-box;
-  border: 1px solid gray;
 }
 html {
   font-size: 62.5%;
@@ -218,15 +217,18 @@ nav {
   text-decoration: none;
 }
 @media (max-width:500px) {
-  nav nav {
+  nav {
     max-width: 500px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-right: 3rem;
-    font-size: 2rem;
     text-decoration: none;
+    width: 80%;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
   }
 }
 h1 {
